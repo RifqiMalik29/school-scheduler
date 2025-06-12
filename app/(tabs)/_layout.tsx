@@ -27,6 +27,7 @@ function MyTabs() {
         tabBarActiveTintColor: "#80B3FF",
         tabBarInactiveTintColor: "#EBEBF599",
       }}
+      initialRouteName="Today"
     >
       <Tab.Screen
         name="Today"

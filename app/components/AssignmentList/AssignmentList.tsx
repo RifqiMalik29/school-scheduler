@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { AssignmentListStyles } from ".";
@@ -6,10 +7,15 @@ import AssignmentExpanded from "./AssignmentExpanded";
 
 const AssignmentList = () => {
   const styles = AssignmentListStyles.default;
+  const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const onShrink = () => {
     setIsExpanded(false);
+  };
+
+  const makeNewAssignment = () => {
+    router.push("/(screens)/assignment-form");
   };
 
   return (
@@ -43,7 +49,7 @@ const AssignmentList = () => {
             )}
           </View>
           {isExpanded ? (
-            <AssignmentExpanded onClose={onShrink} />
+            <AssignmentExpanded onClose={onShrink} onPressNew={makeNewAssignment} />
           ) : (
             <View style={styles.subTitleContainer}>
               <Text style={styles.location}>Room 101</Text>

@@ -7,9 +7,13 @@ import { AssignmentExpandedStyles } from ".";
 
 type AssignmentExpandedProps = {
   onClose?: () => void;
+  onPressNew?: () => void;
 };
 
-const AssignmentExpanded = ({ onClose }: AssignmentExpandedProps) => {
+const AssignmentExpanded = ({
+  onClose,
+  onPressNew,
+}: AssignmentExpandedProps) => {
   const styles = AssignmentExpandedStyles.default;
 
   return (
@@ -45,7 +49,7 @@ const AssignmentExpanded = ({ onClose }: AssignmentExpandedProps) => {
           onPress={onClose}
           containerStyle={{ marginRight: 10 }}
         />
-        <BaseButton title="+ Assignment" type="primary" />
+        <BaseButton title="+ Assignment" type="primary" onPress={onPressNew} />
       </View>
     </View>
   );

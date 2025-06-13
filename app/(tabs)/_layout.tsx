@@ -1,14 +1,13 @@
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import AssigmentsScreen from "./assignments";
-import ScheduleScreen from "./schedule";
+import { ScheduleScreen } from "./schedule";
 import SettingsScreen from "./settings";
 import TodayScreen from "./today";
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
-
   return (
     <Tab.Navigator
       screenOptions={{

@@ -1,5 +1,4 @@
 import AssignmentList from "@/app/components/AssignmentList";
-import CurrentTimeIndicator from "@/app/components/CurrentTimeIndicator";
 import HeaderCalendar from "@/app/components/HeaderCalendar/HeaderCalendar";
 import React from "react";
 import { FlatList, View } from "react-native";
@@ -11,7 +10,7 @@ const TodayScreen = () => {
     <View style={styles.mainContainer}>
       <HeaderCalendar />
       <View style={styles.bodyContainer}>
-        <CurrentTimeIndicator />
+        {/* <CurrentTimeIndicator /> */}
         <FlatList
           data={[1, 2, 3, 4]}
           renderItem={() => <AssignmentList />}

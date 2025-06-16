@@ -9,6 +9,7 @@ const ScheduleScreen = () => {
 
   const styles = ScheduleStyles;
   const { selectActiveDate, days, hours, selectedDate } = ScheduleFunction();
+  console.log(selectedDate)
 
   return (
     <View style={{ flex: 1, backgroundColor: "#010618" }}>
